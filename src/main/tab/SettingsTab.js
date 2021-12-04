@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export default class SettingsTab extends Component {
     render() {
         return (
-            <View style={StyleSheet.container}>
+            <View style={styles.container}>
                 <Text>SettingsTab</Text>
             </View>
         );
@@ -16,5 +16,6 @@ const styles = StyleSheet.create({
         height: '100%',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: '#ffffff',
     }
 });

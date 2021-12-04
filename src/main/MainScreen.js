@@ -110,8 +110,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#ffffff',
-    borderBottomWidth: 2,
-    borderBottomColor: "#a2a2a2",
+    marginBottom: 5,
+    borderBottomWidth: 1,
+    borderBottomColor: "#dedede",
   },
 
   headerTitle: {
