@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
  
-export default class HomeTab extends Component {
+export default class AddMediaTab extends Component {
     render() {
         return (
             <View style={style.container}>

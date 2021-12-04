@@ -9,6 +9,8 @@ import { Icon } from 'images'
 import HomeTab from './tab/HomeTab'
 import LikesTab from './tab/LikesTab'
 import SearchTab from './tab/SearchTab'
+import SettingsTab from './tab/SettingsTab'
+import AddMediaTab from './tab/AddMediaTab'
 import TabBarAnimIcon from './tab/component/TabBarAnimIcon'
 
 export default class MainScreen extends Component {
@@ -33,17 +35,41 @@ export default class MainScreen extends Component {
           // activeColor="#000000"
           // inactiveColor="#aaaaaa"
           shifting={true}
+          labeled={false}
           barStyle={styles.tabBar}>
           <Tab.Screen
             name="HomeTab"
             component={HomeTab}
             options={{
               tabBarLabel: 'Home',
+              // tabBarBadge: '2',
               tabBarIcon: ({ focused }) => 
                 (<TabBarAnimIcon focused={focused}
                     icon={Icon.home}
                     iconAnim={Icon.homeAnim}
                     style={styles.icon}/>),
+            }} />
+          <Tab.Screen
+            name="SearchTab"
+            component={SearchTab}
+            options={{
+              tabBarLabel: 'Search',
+              tabBarIcon: ({ focused }) => 
+                (<TabBarAnimIcon focused={focused}
+                    icon={Icon.search}
+                    iconAnim={Icon.searchAnim}
+                    style={styles.icon}/>),
+            }} />
+          <Tab.Screen
+            name="AddMediaTab"
+            component={AddMediaTab}
+            options={{
+              tabBarLabel: 'Add',
+              tabBarIcon: ({ focused }) => 
+                (<TabBarAnimIcon focused={focused}
+                    icon={Icon.plus}
+                    iconAnim={Icon.plusAnim}
+                    style={styles.iconBig}/>),
             }} />
           <Tab.Screen
             name="LikesTab"
@@ -57,14 +83,14 @@ export default class MainScreen extends Component {
                     style={styles.icon}/>),
             }}/>
           <Tab.Screen
-            name="SearchTab"
-            component={SearchTab}
+            name="SettingsTab"
+            component={SettingsTab}
             options={{
-              tabBarLabel: 'Search',
+              tabBarLabel: 'Settings',
               tabBarIcon: ({ focused }) => 
                 (<TabBarAnimIcon focused={focused}
-                    icon={Icon.search}
-                    iconAnim={Icon.searchAnim}
+                    icon={Icon.settings}
+                    iconAnim={Icon.settingsAnim}
                     style={styles.icon}/>),
             }} />
         </Tab.Navigator>
@@ -95,10 +121,13 @@ const styles = StyleSheet.create({
   },
 
   icon: {
+    height: 26,
+    width: 26,
+  },
+  iconBig: {
     height: 28,
     width: 28,
   },
-
   tabBar: {
     backgroundColor: '#ffffff',
     height: 50
