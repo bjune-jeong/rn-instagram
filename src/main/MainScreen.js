@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
 
   headerTitle: {
     fontSize: 17,
-    fontStyle: 'bold',
+    fontWeight: 'bold',
+    color: 'black',
   },
 
   icon: {
